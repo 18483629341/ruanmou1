@@ -4,11 +4,13 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { DetailComponent} from './detail.component';
+import { LunboComponent} from './lunbo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DetailComponent
+    DetailComponent,
+    LunboComponent
   ],
   imports: [
     BrowserModule,

@@ -20,6 +20,7 @@ const HEROES: Hero[] = [
 @Component({
   selector: 'app-root',
   template: `
+    <h1 (changeNumber)="numberChange($event)">{{num}}</h1>
     <ul class="heroes">
       <li *ngFor="let hero of heroes" 
         [ngClass]="{selected: hero == selectedHero}"
@@ -27,7 +28,8 @@ const HEROES: Hero[] = [
         <span class="badge">{{hero.id}}</span> {{hero.name}}
       </li>
     </ul>
-    <app-detail [props]="selectedHero"></app-detail>
+    <app-detail  [props]="selectedHero" ></app-detail>
+    <app-lunbo></app-lunbo>
   `,
   styles: [`
 
@@ -85,5 +87,10 @@ export class AppComponent {
   selectedHero: Hero;   //空的变量
   onChange(hero:Hero):void {
     this.selectedHero = hero;
+  }
+  num:number=0;
+  numberChange(i:number){
+    console.log("456");
+     this.num=i;
   }
 }
