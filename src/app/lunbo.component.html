@@ -1,0 +1,13 @@
+<div class="index-content">
+    <div class="banner ">
+        <div *ngFor="let imgSrc of Imglist,let i=index">
+            <img [src]="imgSrc" *ngIf="i==num">
+        </div>
+
+        <div class="banner-circle">
+            <ul>
+                <li *ngFor="let imgSrc of Imglist,let i=index" [ngClass]="{selected:i==num}">2</li>
+            </ul>
+        </div>
+    </div>
+</div>

@@ -4,17 +4,21 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { DetailComponent} from './detail.component';
-import { LunboComponent} from './lunbo.component';
+//import { UserComponent} from './user.component';
+import {StatePipe} from './app.pipe';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     DetailComponent,
-    LunboComponent
+    //UserComponent,
+    StatePipe
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
