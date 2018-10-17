@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { DetailComponent} from './detail.component';
 //import { UserComponent} from './user.component';
-import {StatePipe} from './app.pipe';
+import {StatePipe,NumPipe} from './app.pipe';
 
 
 @NgModule({
@@ -13,7 +13,8 @@ import {StatePipe} from './app.pipe';
     AppComponent,
     DetailComponent,
     //UserComponent,
-    StatePipe
+    StatePipe,
+    NumPipe
   ],
   imports: [
     BrowserModule,

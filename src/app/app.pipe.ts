@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform} from '@angular/core';
-
+//过滤的用法一模一样
 @Pipe({
   name:'statepipe'
 })
@@ -11,5 +11,16 @@ export class StatePipe implements PipeTransform{
           default:return "未采购";
     }
   }
-
+}
+@Pipe({
+  name:'numpipe'
+})
+export class NumPipe implements PipeTransform{
+  transform(value:number,args?number):number{
+    if(!args){
+      args=1;
+    }
+    return value*args;
+  }
+  //html  用法 {{num|numpipe:'5'}}
 }
